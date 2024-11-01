@@ -19,13 +19,13 @@ if postinstall
   htmlFilePath = "Pods/ESOpenSourceLicensesKit/ESOpenSourceLicensesKit/Resources/opensource-licenses.html"
 end
 
-if !Dir.exists?(outputDir)
+if !Dir.exist?(outputDir)
   print "\033[0;91m'" + outputDir + "' directory cannot be found\n"
   exit
 end
 
 # Remove original file
-if File.exists?(htmlFilePath)
+if File.exist?(htmlFilePath)
   File.delete(htmlFilePath)
 end
 
